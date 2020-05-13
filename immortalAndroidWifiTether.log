@@ -1,0 +1,334 @@
+Immortal Android WIFI Tether
+----------------------------
+Make sure the server is up and that the Android is running ./tetherwifi.sh
+
+Local Android Scan
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-05-13 00:43 MDT
+Nmap scan report for 192.168.43.1
+Host is up (0.0025s latency).
+Not shown: 99 closed ports
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  dnsmasq 2.51
+MAC Address: 04:D3:95:46:CC:F5 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.11 seconds
+
+Server Scan
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-05-13 00:43 MDT
+Nmap scan report for 40.121.213.9
+Host is up (0.19s latency).
+Not shown: 92 filtered ports
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH for_Windows_8.1 (protocol 2.0)
+80/tcp   open  http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+443/tcp  open  https?
+3389/tcp open  ssl        Microsoft SChannel TLS
+5800/tcp open  vnc-http   TightVNC (user: iisvm; VNC TCP port: 5900)
+5900/tcp open  vnc        VNC (protocol 3.8)
+8080/tcp open  http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+8443/tcp open  https-alt?
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 39.03 seconds
+Password: Monitoring TCP LISTEN ports 8888 5900 5037 9996 9995 5800 3389
+Waiting for 3 seconds to start...
+Executing STARTACTION
+echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
+Open Ports
+COMMAND     PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chromium-  3881 mark  151u  IPv4 506152      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   30u  IPv4 619749      0t0  TCP 192.168.43.66:39448->192.168.43.143:8009 (ESTABLISHED)
+chromium-  3915 mark   38u  IPv4 826659      0t0  TCP localhost:59382->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   39u  IPv4 826662      0t0  TCP localhost:59386->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   40u  IPv4 827727      0t0  TCP localhost:59414->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   45u  IPv4 504602      0t0  TCP 192.168.43.66:38902->192.168.43.143:8008 (ESTABLISHED)
+chromium-  3915 mark   48u  IPv4 506138      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark  105u  IPv4  68502      0t0  UDP 224.0.0.251:mdns 
+adb       29324 root   11u  IPv4 827659      0t0  TCP localhost:5037 (LISTEN)
+autossh   29423 root    3u  IPv4 819154      0t0  TCP localhost:9996 (LISTEN)
+ssh       29426 root    3u  IPv4 819164      0t0  TCP 192.168.43.66:35082->192.168.43.1:2222 (ESTABLISHED)
+ssh       29426 root    4u  IPv6 819169      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       29426 root    5u  IPv4 819170      0t0  TCP localhost:9995 (LISTEN)
+ssh       29426 root    6u  IPv4 819171      0t0  TCP localhost:5900 (LISTEN)
+ssh       29426 root    7u  IPv4 819172      0t0  TCP localhost:5800 (LISTEN)
+ssh       29426 root    8u  IPv4 819173      0t0  TCP localhost:3389 (LISTEN)
+ssh       29426 root    9u  IPv4 819174      0t0  TCP localhost:8888 (LISTEN)
+ssh       29426 root   10u  IPv4 826660      0t0  TCP localhost:8888->localhost:59382 (ESTABLISHED)
+ssh       29426 root   11u  IPv4 827721      0t0  TCP localhost:8888->localhost:59386 (ESTABLISHED)
+ssh       29426 root   12u  IPv4 819196      0t0  TCP localhost:8888->localhost:59414 (ESTABLISHED)
+Press Enter to Exit
+Press Ctrl-C to Exit
+....................................................................................................
+Port 8888 Down at Wed May 13 00:55:39 MDT 2020
+Port 5900 Down at Wed May 13 00:55:39 MDT 2020
+Port 9995 Down at Wed May 13 00:55:39 MDT 2020
+Port 5800 Down at Wed May 13 00:55:39 MDT 2020
+Port 3389 Down at Wed May 13 00:55:39 MDT 2020
+Executing DOWNACTION
+./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
+Open Ports
+COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+adb       1186 root   11u  IPv4 837787      0t0  TCP localhost:5037 (LISTEN)
+autossh   1338 root    3u  IPv4 840088      0t0  TCP localhost:9996 (LISTEN)
+ssh       1342 root    3u  IPv4 838922      0t0  TCP 192.168.43.66:40144->192.168.43.1:2222 (ESTABLISHED)
+ssh       1342 root    4u  IPv6 840818      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       1342 root    5u  IPv4 840819      0t0  TCP localhost:9995 (LISTEN)
+ssh       1342 root    6u  IPv4 840820      0t0  TCP localhost:5900 (LISTEN)
+ssh       1342 root    7u  IPv4 840821      0t0  TCP localhost:5800 (LISTEN)
+ssh       1342 root    8u  IPv4 840822      0t0  TCP localhost:3389 (LISTEN)
+ssh       1342 root    9u  IPv4 840823      0t0  TCP localhost:8888 (LISTEN)
+ssh       1342 root   10u  IPv4 840835      0t0  TCP localhost:8888->localhost:36200 (ESTABLISHED)
+ssh       1342 root   11u  IPv4 840123      0t0  TCP localhost:8888->localhost:36220 (ESTABLISHED)
+chromium- 3881 mark  151u  IPv4 506152      0t0  UDP 224.0.0.251:mdns 
+chromium- 3915 mark   30u  IPv4 619749      0t0  TCP 192.168.43.66:39448->192.168.43.143:8009 (ESTABLISHED)
+chromium- 3915 mark   38u  IPv4 840105      0t0  TCP localhost:36200->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   39u  IPv4 840849      0t0  TCP localhost:36220->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   45u  IPv4 504602      0t0  TCP 192.168.43.66:38902->192.168.43.143:8008 (ESTABLISHED)
+chromium- 3915 mark   48u  IPv4 506138      0t0  UDP 224.0.0.251:mdns 
+chromium- 3915 mark  105u  IPv4  68502      0t0  UDP 224.0.0.251:mdns 
+Press Enter to Exit
+Press Ctrl-C to Exit
+.Executing UPACTION
+./beepup.sh
+................................................................................................................
+Port 8888 Down at Wed May 13 01:05:56 MDT 2020
+Port 5900 Down at Wed May 13 01:05:56 MDT 2020
+Port 9995 Down at Wed May 13 01:05:56 MDT 2020
+Port 5800 Down at Wed May 13 01:05:57 MDT 2020
+Port 3389 Down at Wed May 13 01:05:57 MDT 2020
+Executing DOWNACTION
+./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
+Open Ports
+COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chromium- 3881 mark  151u  IPv4 506152      0t0  UDP 224.0.0.251:mdns 
+chromium- 3915 mark   30u  IPv4 619749      0t0  TCP 192.168.43.66:39448->192.168.43.143:8009 (ESTABLISHED)
+chromium- 3915 mark   39u  IPv4 953568      0t0  TCP localhost:41462->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   41u  IPv4 953631      0t0  TCP localhost:41518->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   42u  IPv4 953589      0t0  TCP localhost:41482->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   45u  IPv4 504602      0t0  TCP 192.168.43.66:38902->192.168.43.143:8008 (ESTABLISHED)
+chromium- 3915 mark   48u  IPv4 506138      0t0  UDP 224.0.0.251:mdns 
+chromium- 3915 mark   50u  IPv4 955420      0t0  TCP localhost:41530->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark  105u  IPv4  68502      0t0  UDP 224.0.0.251:mdns 
+adb       6163 root   11u  IPv4 953491      0t0  TCP localhost:5037 (LISTEN)
+autossh   6262 root    3u  IPv4 955006      0t0  TCP localhost:9996 (LISTEN)
+ssh       6265 root    3u  IPv4 942734      0t0  TCP 192.168.43.66:45410->192.168.43.1:2222 (ESTABLISHED)
+ssh       6265 root    4u  IPv6 951276      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       6265 root    5u  IPv4 951277      0t0  TCP localhost:9995 (LISTEN)
+ssh       6265 root    6u  IPv4 951278      0t0  TCP localhost:5900 (LISTEN)
+ssh       6265 root    7u  IPv4 951279      0t0  TCP localhost:5800 (LISTEN)
+ssh       6265 root    8u  IPv4 951280      0t0  TCP localhost:3389 (LISTEN)
+ssh       6265 root    9u  IPv4 951281      0t0  TCP localhost:8888 (LISTEN)
+ssh       6265 root   10u  IPv4 955030      0t0  TCP localhost:8888->localhost:41482 (ESTABLISHED)
+ssh       6265 root   11u  IPv4 951295      0t0  TCP localhost:8888->localhost:41462 (ESTABLISHED)
+ssh       6265 root   12u  IPv4 953632      0t0  TCP localhost:8888->localhost:41518 (ESTABLISHED)
+ssh       6265 root   13u  IPv4 955421      0t0  TCP localhost:8888->localhost:41530 (ESTABLISHED)
+Press Enter to Exit
+Press Ctrl-C to Exit
+.Executing UPACTION
+./beepup.sh
+................................................................................................................
+Port 8888 Down at Wed May 13 01:16:18 MDT 2020
+Port 5900 Down at Wed May 13 01:16:18 MDT 2020
+Port 9995 Down at Wed May 13 01:16:18 MDT 2020
+Port 5800 Down at Wed May 13 01:16:18 MDT 2020
+Port 3389 Down at Wed May 13 01:16:18 MDT 2020
+Executing DOWNACTION
+./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
+Open Ports
+COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chromium-  3881 mark  151u  IPv4  506152      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   30u  IPv4  619749      0t0  TCP 192.168.43.66:39448->192.168.43.143:8009 (ESTABLISHED)
+chromium-  3915 mark   38u  IPv4 1066684      0t0  TCP localhost:47034->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   39u  IPv4 1062469      0t0  TCP localhost:47106->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   41u  IPv4 1067640      0t0  TCP localhost:47038->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   42u  IPv4 1063495      0t0  TCP localhost:47074->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   43u  IPv4 1062437      0t0  TCP localhost:47054->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   45u  IPv4  504602      0t0  TCP 192.168.43.66:38902->192.168.43.143:8008 (ESTABLISHED)
+chromium-  3915 mark   48u  IPv4  506138      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   49u  IPv4 1062464      0t0  TCP localhost:47094->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
+adb       11688 root   10u  IPv4 1062329      0t0  TCP localhost:5037 (LISTEN)
+autossh   11786 root    3u  IPv4 1063427      0t0  TCP localhost:9996 (LISTEN)
+ssh       11789 root    3u  IPv4 1066665      0t0  TCP 192.168.43.66:50978->192.168.43.1:2222 (ESTABLISHED)
+ssh       11789 root    4u  IPv6 1067612      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       11789 root    5u  IPv4 1067613      0t0  TCP localhost:9995 (LISTEN)
+ssh       11789 root    6u  IPv4 1067614      0t0  TCP localhost:5900 (LISTEN)
+ssh       11789 root    7u  IPv4 1067615      0t0  TCP localhost:5800 (LISTEN)
+ssh       11789 root    8u  IPv4 1067616      0t0  TCP localhost:3389 (LISTEN)
+ssh       11789 root    9u  IPv4 1067617      0t0  TCP localhost:8888 (LISTEN)
+ssh       11789 root   10u  IPv4 1066685      0t0  TCP localhost:8888->localhost:47034 (ESTABLISHED)
+ssh       11789 root   11u  IPv4 1066686      0t0  TCP localhost:8888->localhost:47038 (ESTABLISHED)
+ssh       11789 root   12u  IPv4 1063473      0t0  TCP localhost:8888->localhost:47054 (ESTABLISHED)
+ssh       11789 root   13u  IPv4 1063496      0t0  TCP localhost:8888->localhost:47074 (ESTABLISHED)
+ssh       11789 root   14u  IPv4 1063505      0t0  TCP localhost:8888->localhost:47094 (ESTABLISHED)
+ssh       11789 root   15u  IPv4 1066730      0t0  TCP localhost:8888->localhost:47106 (ESTABLISHED)
+Press Enter to Exit
+Press Ctrl-C to Exit
+.Executing UPACTION
+./beepup.sh
+................................................................................................................
+Port 8888 Down at Wed May 13 01:26:38 MDT 2020
+Port 5900 Down at Wed May 13 01:26:38 MDT 2020
+Port 9995 Down at Wed May 13 01:26:38 MDT 2020
+Port 5800 Down at Wed May 13 01:26:38 MDT 2020
+Port 3389 Down at Wed May 13 01:26:38 MDT 2020
+Executing DOWNACTION
+./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
+Open Ports
+COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chromium-  3881 mark  119u  IPv4 1137678      0t0  UDP 192.168.43.66:40680 
+chromium-  3881 mark  151u  IPv4 1131277      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   30u  IPv4  619749      0t0  TCP 192.168.43.66:39448->192.168.43.143:8009 (ESTABLISHED)
+chromium-  3915 mark   32u  IPv4 1136941      0t0  TCP localhost:53300->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   39u  IPv4 1131246      0t0  TCP localhost:53340->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   41u  IPv4 1129463      0t0  TCP localhost:53312->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   44u  IPv4 1137088      0t0  TCP localhost:53324->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   45u  IPv4 1128428      0t0  TCP localhost:53328->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   49u  IPv4 1131249      0t0  TCP localhost:53344->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   50u  IPv4 1131251      0t0  TCP localhost:53356->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   51u  IPv4 1131253      0t0  TCP localhost:53360->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   52u  IPv4 1131255      0t0  TCP localhost:53364->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   57u  IPv4 1131257      0t0  TCP localhost:53368->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   58u  IPv4 1137679      0t0  TCP 192.168.43.66:42278->192.168.43.143:8008 (ESTABLISHED)
+chromium-  3915 mark   60u  IPv4 1131262      0t0  TCP localhost:53382->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   65u  IPv4 1137698      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   66u  IPv4 1137700      0t0  TCP localhost:53394->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
+adb       18313 root   11u  IPv4 1128013      0t0  TCP localhost:5037 (LISTEN)
+autossh   18412 root    3u  IPv4 1131038      0t0  TCP localhost:9996 (LISTEN)
+ssh       18415 root    3u  IPv4 1136565      0t0  TCP 192.168.43.66:57198->192.168.43.1:2222 (ESTABLISHED)
+ssh       18415 root    4u  IPv6 1131081      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       18415 root    5u  IPv4 1131082      0t0  TCP localhost:9995 (LISTEN)
+ssh       18415 root    6u  IPv4 1131083      0t0  TCP localhost:5900 (LISTEN)
+ssh       18415 root    7u  IPv4 1131084      0t0  TCP localhost:5800 (LISTEN)
+ssh       18415 root    8u  IPv4 1131085      0t0  TCP localhost:3389 (LISTEN)
+ssh       18415 root    9u  IPv4 1131086      0t0  TCP localhost:8888 (LISTEN)
+ssh       18415 root   10u  IPv4 1131111      0t0  TCP localhost:8888->localhost:53270 (CLOSE_WAIT)
+ssh       18415 root   11u  IPv4 1131112      0t0  TCP localhost:8888->localhost:53274 (CLOSE_WAIT)
+ssh       18415 root   12u  IPv4 1131113      0t0  TCP localhost:8888->localhost:53278 (CLOSE_WAIT)
+ssh       18415 root   13u  IPv4 1136942      0t0  TCP localhost:8888->localhost:53300 (ESTABLISHED)
+ssh       18415 root   14u  IPv4 1136944      0t0  TCP localhost:8888->localhost:53312 (ESTABLISHED)
+ssh       18415 root   15u  IPv4 1137089      0t0  TCP localhost:8888->localhost:53324 (ESTABLISHED)
+ssh       18415 root   16u  IPv4 1137169      0t0  TCP localhost:8888->localhost:53328 (ESTABLISHED)
+ssh       18415 root   17u  IPv4 1137187      0t0  TCP localhost:8888->localhost:53340 (ESTABLISHED)
+ssh       18415 root   18u  IPv4 1137188      0t0  TCP localhost:8888->localhost:53344 (ESTABLISHED)
+ssh       18415 root   19u  IPv4 1137193      0t0  TCP localhost:8888->localhost:53356 (ESTABLISHED)
+ssh       18415 root   20u  IPv4 1137194      0t0  TCP localhost:8888->localhost:53360 (ESTABLISHED)
+ssh       18415 root   21u  IPv4 1137195      0t0  TCP localhost:8888->localhost:53364 (ESTABLISHED)
+ssh       18415 root   22u  IPv4 1137196      0t0  TCP localhost:8888->localhost:53368 (ESTABLISHED)
+ssh       18415 root   23u  IPv4 1137208      0t0  TCP localhost:8888->localhost:53382 (ESTABLISHED)
+ssh       18415 root   24u  IPv4 1137213      0t0  TCP localhost:8888->localhost:53394 (ESTABLISHED)
+Press Enter to Exit
+Press Ctrl-C to Exit
+.Executing UPACTION
+./beepup.sh
+................................................................................................................
+Port 8888 Down at Wed May 13 01:36:58 MDT 2020
+Port 5900 Down at Wed May 13 01:36:58 MDT 2020
+Port 9995 Down at Wed May 13 01:36:58 MDT 2020
+Port 5800 Down at Wed May 13 01:36:58 MDT 2020
+Port 3389 Down at Wed May 13 01:36:58 MDT 2020
+Executing DOWNACTION
+./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
+Open Ports
+COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chromium-  3881 mark  151u  IPv4 1131277      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   30u  IPv4  619749      0t0  TCP 192.168.43.66:39448->192.168.43.143:8009 (ESTABLISHED)
+chromium-  3915 mark   38u  IPv4 1351149      0t0  TCP localhost:58408->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   40u  IPv4 1347199      0t0  TCP localhost:58412->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   43u  IPv4 1351787      0t0  TCP localhost:58432->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   44u  IPv4 1344269      0t0  TCP localhost:58436->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   45u  IPv4 1344298      0t0  TCP localhost:58464->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   49u  IPv4 1344300      0t0  TCP localhost:58468->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   58u  IPv4 1137679      0t0  TCP 192.168.43.66:42278->192.168.43.143:8008 (ESTABLISHED)
+chromium-  3915 mark   65u  IPv4 1137698      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
+adb       23085 root   11u  IPv4 1351026      0t0  TCP localhost:5037 (LISTEN)
+autossh   23184 root    3u  IPv4 1351102      0t0  TCP localhost:9996 (LISTEN)
+ssh       23187 root    3u  IPv4 1351112      0t0  TCP 192.168.43.66:34112->192.168.43.1:2222 (ESTABLISHED)
+ssh       23187 root    4u  IPv6 1351755      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       23187 root    5u  IPv4 1351756      0t0  TCP localhost:9995 (LISTEN)
+ssh       23187 root    6u  IPv4 1351757      0t0  TCP localhost:5900 (LISTEN)
+ssh       23187 root    7u  IPv4 1351758      0t0  TCP localhost:5800 (LISTEN)
+ssh       23187 root    8u  IPv4 1351759      0t0  TCP localhost:3389 (LISTEN)
+ssh       23187 root    9u  IPv4 1351760      0t0  TCP localhost:8888 (LISTEN)
+ssh       23187 root   10u  IPv4 1351763      0t0  TCP localhost:8888->localhost:58408 (ESTABLISHED)
+ssh       23187 root   11u  IPv4 1351766      0t0  TCP localhost:8888->localhost:58412 (ESTABLISHED)
+ssh       23187 root   12u  IPv4 1351788      0t0  TCP localhost:8888->localhost:58432 (ESTABLISHED)
+ssh       23187 root   13u  IPv4 1351789      0t0  TCP localhost:8888->localhost:58436 (ESTABLISHED)
+ssh       23187 root   14u  IPv4 1351181      0t0  TCP localhost:8888->localhost:58464 (ESTABLISHED)
+ssh       23187 root   15u  IPv4 1347222      0t0  TCP localhost:8888->localhost:58468 (ESTABLISHED)
+Press Enter to Exit
+Press Ctrl-C to Exit
+.Executing UPACTION
+./beepup.sh
+................................................................................................................
+Port 8888 Down at Wed May 13 01:47:16 MDT 2020
+Port 5900 Down at Wed May 13 01:47:16 MDT 2020
+Port 9995 Down at Wed May 13 01:47:16 MDT 2020
+Port 5800 Down at Wed May 13 01:47:16 MDT 2020
+Port 3389 Down at Wed May 13 01:47:16 MDT 2020
+Executing DOWNACTION
+./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
+Open Ports
+COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chromium-  3881 mark  151u  IPv4 1131277      0t0  UDP 224.0.0.251:mdns 
+chromium-  3881 mark  165u  IPv4 1375145      0t0  TCP localhost:50580->localhost:9229 (SYN_SENT)
+chromium-  3915 mark   30u  IPv4 1373132      0t0  TCP 192.168.43.66:38834->192.168.43.143:8009 (SYN_SENT)
+chromium-  3915 mark   33u  IPv4 1378400      0t0  TCP localhost:59206->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   38u  IPv4 1377488      0t0  TCP localhost:59210->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   40u  IPv4 1377497      0t0  TCP localhost:59214->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   42u  IPv4 1373177      0t0  TCP localhost:59222->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   58u  IPv4 1137679      0t0  TCP 192.168.43.66:42278->192.168.43.143:8008 (ESTABLISHED)
+chromium-  3915 mark   65u  IPv4 1137698      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
+adb       27716 root   10u  IPv4 1376558      0t0  TCP localhost:5037 (LISTEN)
+autossh   27815 root    3u  IPv4 1377469      0t0  TCP localhost:9996 (LISTEN)
+ssh       27818 root    3u  IPv4 1376603      0t0  TCP 192.168.43.66:34948->192.168.43.1:2222 (ESTABLISHED)
+ssh       27818 root    4u  IPv6 1378387      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       27818 root    5u  IPv4 1378388      0t0  TCP localhost:9995 (LISTEN)
+ssh       27818 root    6u  IPv4 1378389      0t0  TCP localhost:5900 (LISTEN)
+ssh       27818 root    7u  IPv4 1378390      0t0  TCP localhost:5800 (LISTEN)
+ssh       27818 root    8u  IPv4 1378391      0t0  TCP localhost:3389 (LISTEN)
+ssh       27818 root    9u  IPv4 1378392      0t0  TCP localhost:8888 (LISTEN)
+ssh       27818 root   10u  IPv4 1377485      0t0  TCP localhost:8888->localhost:59206 (ESTABLISHED)
+ssh       27818 root   11u  IPv4 1377489      0t0  TCP localhost:8888->localhost:59210 (ESTABLISHED)
+ssh       27818 root   12u  IPv4 1378416      0t0  TCP localhost:8888->localhost:59214 (ESTABLISHED)
+ssh       27818 root   13u  IPv4 1376617      0t0  TCP localhost:8888->localhost:59222 (ESTABLISHED)
+Press Enter to Exit
+Press Ctrl-C to Exit
+.Executing UPACTION
+./beepup.sh
+..............................................................

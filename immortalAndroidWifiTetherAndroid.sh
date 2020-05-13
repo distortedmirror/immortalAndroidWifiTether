@@ -1,0 +1,2 @@
+cd androidscripts
+./tetherwifi.sh

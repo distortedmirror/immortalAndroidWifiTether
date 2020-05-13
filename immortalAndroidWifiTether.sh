@@ -13,7 +13,7 @@ export NAME="immortaltetherwifi.sh"
 export EMAILS="mark.brito@gmail.com;mark.brito.gcloud@gmail.com"
 export IMMORTALPASSWORD
 export SCAN="n"
-export SECONDSTODUMPCAP=21
+export SECONDSTODUMPCAP=60
 export STARTDUMPCAP=`date +"%s"`
 export ENDDUMPCAP=`date +"%s"`
 #echo -n "Scan Server and Proxy (y/n)? "

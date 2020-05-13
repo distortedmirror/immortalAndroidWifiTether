@@ -1,6 +1,6 @@
 COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
 chromium-  3881 mark  120u  IPv4 1413515      0t0  UDP 224.0.0.251:mdns 
-chromium-  3881 mark  165u  IPv4 1582728      0t0  TCP localhost:51082->localhost:9229 (SYN_SENT)
+chromium-  3881 mark  263u  IPv4 1585613      0t0  TCP localhost:51166->localhost:9229 (SYN_SENT)
 chromium-  3915 mark   30u  IPv4 1584189      0t0  TCP localhost:59686->localhost:8888 (ESTABLISHED)
 chromium-  3915 mark   32u  IPv4 1584199      0t0  TCP localhost:59690->localhost:8888 (ESTABLISHED)
 chromium-  3915 mark   33u  IPv4 1583245      0t0  TCP localhost:59694->localhost:8888 (ESTABLISHED)
@@ -8,8 +8,14 @@ chromium-  3915 mark   37u  IPv4 1412716      0t0  UDP 224.0.0.251:mdns
 chromium-  3915 mark   40u  IPv4 1584215      0t0  TCP localhost:59706->localhost:8888 (ESTABLISHED)
 chromium-  3915 mark   41u  IPv4 1583248      0t0  TCP localhost:59698->localhost:8888 (ESTABLISHED)
 chromium-  3915 mark   42u  IPv4 1583263      0t0  TCP localhost:59710->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   43u  IPv4 1585632      0t0  TCP localhost:59740->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   45u  IPv4 1585852      0t0  TCP localhost:59756->localhost:8888 (ESTABLISHED)
 chromium-  3915 mark   48u  IPv4 1583080      0t0  TCP localhost:59714->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   50u  IPv4 1583358      0t0  TCP localhost:59722->localhost:8888 (ESTABLISHED)
 chromium-  3915 mark   52u  IPv4 1583082      0t0  TCP localhost:59718->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   57u  IPv4 1592487      0t0  TCP localhost:59744->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   59u  IPv4 1585027      0t0  TCP localhost:59748->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   65u  IPv4 1593480      0t0  TCP localhost:59752->localhost:8888 (ESTABLISHED)
 chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
 adb       19228 root   12u  IPv4 1584139      0t0  TCP localhost:5037 (LISTEN)
 autossh   19329 root    3u  IPv4 1583208      0t0  TCP localhost:9996 (LISTEN)
@@ -28,4 +34,11 @@ ssh       19333 root   14u  IPv4 1583251      0t0  TCP localhost:8888->localhost
 ssh       19333 root   15u  IPv4 1584282      0t0  TCP localhost:8888->localhost:59710 (ESTABLISHED)
 ssh       19333 root   16u  IPv4 1579983      0t0  TCP localhost:8888->localhost:59714 (ESTABLISHED)
 ssh       19333 root   17u  IPv4 1579984      0t0  TCP localhost:8888->localhost:59718 (ESTABLISHED)
+ssh       19333 root   18u  IPv4 1584335      0t0  TCP localhost:8888->localhost:59722 (ESTABLISHED)
+ssh       19333 root   19u  IPv4 1584925      0t0  TCP localhost:8888->localhost:59740 (ESTABLISHED)
+ssh       19333 root   20u  IPv4 1592488      0t0  TCP localhost:8888->localhost:59744 (ESTABLISHED)
+ssh       19333 root   21u  IPv4 1592523      0t0  TCP localhost:8888->localhost:59748 (ESTABLISHED)
+ssh       19333 root   22u  IPv4 1585029      0t0  TCP localhost:8888->localhost:59752 (ESTABLISHED)
+ssh       19333 root   23u  IPv4 1585061      0t0  TCP localhost:8888->localhost:59756 (ESTABLISHED)
+dhclient  19909 root    6u  IPv4 1584083      0t0  UDP *:bootpc 
 Press Enter to Exit

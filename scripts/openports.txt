@@ -1,0 +1,8 @@
+COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chromium-  3881 mark  120u  IPv4 1413515      0t0  UDP 224.0.0.251:mdns 
+chromium-  3881 mark  216u  IPv4 1567012      0t0  TCP localhost:49894->localhost:9229 (SYN_SENT)
+chromium-  3915 mark   37u  IPv4 1412716      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
+adb       13011 root   11u  IPv4 1559858      0t0  TCP localhost:5037 (LISTEN)
+dhclient  13141 root    6u  IPv4 1559119      0t0  UDP *:bootpc 
+Press Enter to Exit

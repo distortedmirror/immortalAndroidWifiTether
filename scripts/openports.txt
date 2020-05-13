@@ -1,24 +1,28 @@
-COMMAND    PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
-chromium- 3881 mark  118u  IPv4 1417585      0t0  TCP localhost:55468->localhost:9229 (SYN_SENT)
-chromium- 3881 mark  120u  IPv4 1413515      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark   32u  IPv4 1416650      0t0  TCP localhost:35848->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   37u  IPv4 1412716      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark   38u  IPv4 1418597      0t0  TCP localhost:35832->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   39u  IPv4 1416604      0t0  TCP localhost:35840->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   40u  IPv4 1415739      0t0  TCP localhost:35844->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
-adb       8490 root   11u  IPv4 1417676      0t0  TCP localhost:5037 (LISTEN)
-autossh   8612 root    3u  IPv4 1417698      0t0  TCP localhost:9996 (LISTEN)
-ssh       8626 root    3u  IPv4 1415727      0t0  TCP 192.168.43.66:39808->192.168.43.1:2222 (ESTABLISHED)
-ssh       8626 root    4u  IPv6 1417704      0t0  TCP ip6-localhost:9995 (LISTEN)
-ssh       8626 root    5u  IPv4 1417705      0t0  TCP localhost:9995 (LISTEN)
-ssh       8626 root    6u  IPv4 1417706      0t0  TCP localhost:5900 (LISTEN)
-ssh       8626 root    7u  IPv4 1417707      0t0  TCP localhost:5800 (LISTEN)
-ssh       8626 root    8u  IPv4 1417708      0t0  TCP localhost:3389 (LISTEN)
-ssh       8626 root    9u  IPv4 1417709      0t0  TCP localhost:8888 (LISTEN)
-ssh       8626 root   10u  IPv4 1418598      0t0  TCP localhost:8888->localhost:35832 (ESTABLISHED)
-ssh       8626 root   11u  IPv4 1418604      0t0  TCP localhost:8888->localhost:35840 (ESTABLISHED)
-ssh       8626 root   12u  IPv4 1418609      0t0  TCP localhost:8888->localhost:35844 (ESTABLISHED)
-ssh       8626 root   13u  IPv4 1417793      0t0  TCP localhost:8888->localhost:35848 (ESTABLISHED)
-dhclient  8656 root    6u  IPv4 1416618      0t0  UDP *:bootpc 
+COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chromium-  3881 mark  118u  IPv4 1421745      0t0  TCP localhost:55642->localhost:9229 (SYN_SENT)
+chromium-  3881 mark  120u  IPv4 1413515      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   30u  IPv4 1421722      0t0  TCP localhost:35976->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   32u  IPv4 1421644      0t0  TCP localhost:35964->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   33u  IPv4 1423468      0t0  TCP localhost:35984->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   37u  IPv4 1412716      0t0  UDP 224.0.0.251:mdns 
+chromium-  3915 mark   39u  IPv4 1421042      0t0  TCP localhost:35968->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   41u  IPv4 1421664      0t0  TCP localhost:35972->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark   44u  IPv4 1421795      0t0  TCP localhost:35988->localhost:8888 (ESTABLISHED)
+chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
+adb       10336 root   11u  IPv4 1421576      0t0  TCP localhost:5037 (LISTEN)
+autossh   10435 root    3u  IPv4 1421619      0t0  TCP localhost:9996 (LISTEN)
+ssh       10438 root    3u  IPv4 1422525      0t0  TCP 192.168.43.66:39940->192.168.43.1:2222 (ESTABLISHED)
+ssh       10438 root    4u  IPv6 1421624      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       10438 root    5u  IPv4 1421625      0t0  TCP localhost:9995 (LISTEN)
+ssh       10438 root    6u  IPv4 1421626      0t0  TCP localhost:5900 (LISTEN)
+ssh       10438 root    7u  IPv4 1421627      0t0  TCP localhost:5800 (LISTEN)
+ssh       10438 root    8u  IPv4 1421628      0t0  TCP localhost:3389 (LISTEN)
+ssh       10438 root    9u  IPv4 1421629      0t0  TCP localhost:8888 (LISTEN)
+ssh       10438 root   10u  IPv4 1421028      0t0  TCP localhost:8888->localhost:35964 (ESTABLISHED)
+ssh       10438 root   11u  IPv4 1422542      0t0  TCP localhost:8888->localhost:35968 (ESTABLISHED)
+ssh       10438 root   12u  IPv4 1421043      0t0  TCP localhost:8888->localhost:35972 (ESTABLISHED)
+ssh       10438 root   13u  IPv4 1421063      0t0  TCP localhost:8888->localhost:35976 (ESTABLISHED)
+ssh       10438 root   14u  IPv4 1422707      0t0  TCP localhost:8888->localhost:35984 (ESTABLISHED)
+ssh       10438 root   15u  IPv4 1421169      0t0  TCP localhost:8888->localhost:35988 (ESTABLISHED)
+dhclient  10861 root    6u  IPv4 1422729      0t0  UDP *:bootpc 
 Press Enter to Exit

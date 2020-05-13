@@ -1,7 +1,7 @@
-if [ "$1" = "" -o "$2" = "" -o "$3" = "" -o "$4" = "" -o "$5" = "" -o "$6" = "" -o "$7" = "" ]; then
-  echo ./monitor.sh [START WAIT SECONDS] [HEART BEAT TIME SECONDS] [PORT LIST IN QUOTES] [UPACTION] [DOWNACTION] [STARTACTION] [STOPACTION] 
+if [ "$1" = "" -o "$2" = "" -o "$3" = "" -o "$4" = "" -o "$5" = "" -o "$6" = "" -o "$7" = "" -o "$8" = "" ]; then
+  echo ./monitor.sh [START WAIT SECONDS] [HEART BEAT TIME SECONDS] [PORT LIST IN QUOTES] [UPACTION] [DOWNACTION] [STARTACTION] [STOPACTION] [BEATOPTION]
   echo Note that \$TITLE and \$MESSAGE are special environment variables you can add in the ACTIONS arguments.
- echo "Example: ./monitor.sh 10 15 \"21 80 443\" './emaildown.sh email@domain.com \"\$TITLE\" \"\$MESSAGE\";./restart.sh' './emailup.sh email@domain.com \"Server Up\" \"\$MESSAGE\"' './start.sh' './stop.sh'"
+ echo "Example: ./monitor.sh 10 15 \"21 80 443\" './emaildown.sh email@domain.com \"\$TITLE\" \"\$MESSAGE\";./restart.sh' './emailup.sh email@domain.com \"Server Up\" \"\$MESSAGE\"' './start.sh' './stop.sh'" "date;"
   exit 1
 fi
 export ACTIONSLEEP=10
@@ -12,6 +12,7 @@ export UPACTION=$4
 export DOWNACTION=$5
 export STARTACTION=$6
 export STOPACTION=$7
+export BEATACTION=$8
 export port
 export timestamp="`date`"
 export down=0
@@ -76,5 +77,7 @@ while true; do
  fi
  sleep $HEARTBEATTIMEINSECONDS
  perl -e 'print ".";'
+   bash -c "$BEATACTION" &
+   sleep $ACTIONSLEEP 
 done
 exit 0

@@ -4,436 +4,67 @@ Make sure the server is up and that the Android is running ./tetherwifi.sh
 
 Local Android Scan
 
-Starting Nmap 7.60 ( https://nmap.org ) at 2020-05-13 02:05 MDT
-Nmap scan report for 192.168.43.1
-Host is up (0.0040s latency).
-Not shown: 99 closed ports
-PORT   STATE SERVICE VERSION
-53/tcp open  domain  dnsmasq 2.51
-MAC Address: 04:D3:95:46:CC:F5 (Unknown)
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 8.82 seconds
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     tcp  --  anywhere             anywhere             tcp spt:2222
-DROP       tcp  --  localhost            anywhere             tcp spt:9229
-DROP       tcp  --  localhost            anywhere             tcp dpt:9229
-DROP       tcp  --  anywhere             anywhere             tcp spt:8008
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8008
-DROP       tcp  --  anywhere             anywhere             tcp spt:8009
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8009
-ACCEPT     all  --  localhost            anywhere            
-ACCEPT     all  --  192.168.43.143       anywhere            
-ACCEPT     all  --  224.0.0.251          anywhere            
-ACCEPT     all  --  239.255.255.250      anywhere            
-DROP       all  --  anywhere             anywhere            
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:2222
-DROP       tcp  --  anywhere             localhost            tcp spt:9229
-DROP       tcp  --  anywhere             localhost            tcp dpt:9229
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8008
-DROP       tcp  --  anywhere             anywhere             tcp spt:8008
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8009
-DROP       tcp  --  anywhere             anywhere             tcp spt:8009
-ACCEPT     all  --  anywhere             localhost           
-ACCEPT     all  --  anywhere             192.168.43.143      
-ACCEPT     all  --  anywhere             224.0.0.251         
-ACCEPT     all  --  anywhere             239.255.255.250     
-DROP       all  --  anywhere             anywhere            
-
 Server Scan
-
-Starting Nmap 7.60 ( https://nmap.org ) at 2020-05-13 02:06 MDT
-Nmap scan report for 40.121.213.9
-Host is up (0.15s latency).
-Not shown: 92 filtered ports
-PORT     STATE SERVICE    VERSION
-22/tcp   open  ssh        OpenSSH for_Windows_8.1 (protocol 2.0)
-80/tcp   open  http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-443/tcp  open  https?
-3389/tcp open  ssl        Microsoft SChannel TLS
-5800/tcp open  http-proxy sslstrip
-5900/tcp open  vnc        VNC (protocol 3.8)
-8080/tcp open  http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-8443/tcp open  https-alt?
-Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 39.68 seconds
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     tcp  --  anywhere             anywhere             tcp spt:2222
-DROP       tcp  --  localhost            anywhere             tcp spt:9229
-DROP       tcp  --  localhost            anywhere             tcp dpt:9229
-DROP       tcp  --  anywhere             anywhere             tcp spt:8008
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8008
-DROP       tcp  --  anywhere             anywhere             tcp spt:8009
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8009
-ACCEPT     all  --  localhost            anywhere            
-ACCEPT     all  --  192.168.43.143       anywhere            
-ACCEPT     all  --  224.0.0.251          anywhere            
-ACCEPT     all  --  239.255.255.250      anywhere            
-DROP       all  --  anywhere             anywhere            
-
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:2222
-DROP       tcp  --  anywhere             localhost            tcp spt:9229
-DROP       tcp  --  anywhere             localhost            tcp dpt:9229
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8008
-DROP       tcp  --  anywhere             anywhere             tcp spt:8008
-DROP       tcp  --  anywhere             anywhere             tcp dpt:8009
-DROP       tcp  --  anywhere             anywhere             tcp spt:8009
-ACCEPT     all  --  anywhere             localhost           
-ACCEPT     all  --  anywhere             192.168.43.143      
-ACCEPT     all  --  anywhere             224.0.0.251         
-ACCEPT     all  --  anywhere             239.255.255.250     
-DROP       all  --  anywhere             anywhere            
 Password: Monitoring TCP LISTEN ports 8888 5900 5037 9996 9995 5800 3389
 Waiting for 3 seconds to start...
 Executing STARTACTION
-echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+killall dumpcap 2>/dev/null;dumpcap -w dumpcap.pcapng;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
+
+Port 8888 Down at Wed May 13 03:26:44 MDT 2020
+Port 5900 Down at Wed May 13 03:26:44 MDT 2020
+Port 9996 Down at Wed May 13 03:26:44 MDT 2020
+Port 9995 Down at Wed May 13 03:26:44 MDT 2020
+Port 5800 Down at Wed May 13 03:26:45 MDT 2020
+Port 3389 Down at Wed May 13 03:26:45 MDT 2020
+Executing DOWNACTION
+./beepdown.sh;killall dumpcap 2>/dev/null;mv dumpcap.pcapng `date|sed -e 's/[ :]/_/ig'`.pcapng;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
 Starting tetherwifi.sh...
 Cleaning Up
+Starting tetherwifi.sh...
+Cleaning Up
+Scan Server and Proxy (y/n)? Password: 
+Running SSH in Background
 Scan Server and Proxy (y/n)? Password: 
 Running SSH in Background
 Open Ports
 COMMAND    PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
-adb       2226 root   11u  IPv4 1399370      0t0  TCP localhost:5037 (LISTEN)
-autossh   2325 root    3u  IPv4 1399408      0t0  TCP localhost:9996 (LISTEN)
-ssh       2328 root    3u  IPv4 1401907      0t0  TCP 192.168.43.66:38444->192.168.43.1:2222 (ESTABLISHED)
-ssh       2328 root    4u  IPv6 1400363      0t0  TCP ip6-localhost:9995 (LISTEN)
-ssh       2328 root    5u  IPv4 1400364      0t0  TCP localhost:9995 (LISTEN)
-ssh       2328 root    6u  IPv4 1400365      0t0  TCP localhost:5900 (LISTEN)
-ssh       2328 root    7u  IPv4 1400366      0t0  TCP localhost:5800 (LISTEN)
-ssh       2328 root    8u  IPv4 1400367      0t0  TCP localhost:3389 (LISTEN)
-ssh       2328 root    9u  IPv4 1400368      0t0  TCP localhost:8888 (LISTEN)
-ssh       2328 root   10u  IPv4 1399468      0t0  TCP localhost:8888->localhost:34472 (ESTABLISHED)
-ssh       2328 root   11u  IPv4 1402043      0t0  TCP localhost:8888->localhost:34476 (ESTABLISHED)
-dhclient  2329 root    6u  IPv4 1399452      0t0  UDP *:bootpc 
-chromium- 3881 mark  119u  IPv4 1398762      0t0  TCP localhost:54104->localhost:9229 (SYN_SENT)
-chromium- 3881 mark  151u  IPv4 1131277      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark   32u  IPv4 1401134      0t0  TCP localhost:34472->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   33u  IPv4 1402042      0t0  TCP localhost:34476->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   65u  IPv4 1137698      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
-Press Enter to Exit
-Press Ctrl-C to Exit
-.............................
-Port 8888 Down at Wed May 13 02:09:47 MDT 2020
-Port 5900 Down at Wed May 13 02:09:47 MDT 2020
-Port 9995 Down at Wed May 13 02:09:47 MDT 2020
-Port 5800 Down at Wed May 13 02:09:47 MDT 2020
-Port 3389 Down at Wed May 13 02:09:47 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:10:03 MDT 2020
-Port 5900 Down at Wed May 13 02:10:03 MDT 2020
-Port 9996 Down at Wed May 13 02:10:03 MDT 2020
-Port 9995 Down at Wed May 13 02:10:03 MDT 2020
-Port 5800 Down at Wed May 13 02:10:03 MDT 2020
-Port 3389 Down at Wed May 13 02:10:03 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:10:18 MDT 2020
-Port 5900 Down at Wed May 13 02:10:18 MDT 2020
-Port 9996 Down at Wed May 13 02:10:18 MDT 2020
-Port 9995 Down at Wed May 13 02:10:18 MDT 2020
-Port 5800 Down at Wed May 13 02:10:18 MDT 2020
-Port 3389 Down at Wed May 13 02:10:18 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:10:33 MDT 2020
-Port 5900 Down at Wed May 13 02:10:33 MDT 2020
-Port 9996 Down at Wed May 13 02:10:33 MDT 2020
-Port 9995 Down at Wed May 13 02:10:33 MDT 2020
-Port 5800 Down at Wed May 13 02:10:33 MDT 2020
-Port 3389 Down at Wed May 13 02:10:33 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:10:49 MDT 2020
-Port 5900 Down at Wed May 13 02:10:49 MDT 2020
-Port 9996 Down at Wed May 13 02:10:49 MDT 2020
-Port 9995 Down at Wed May 13 02:10:49 MDT 2020
-Port 5800 Down at Wed May 13 02:10:49 MDT 2020
-Port 3389 Down at Wed May 13 02:10:49 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:11:04 MDT 2020
-Port 5900 Down at Wed May 13 02:11:04 MDT 2020
-Port 9996 Down at Wed May 13 02:11:04 MDT 2020
-Port 9995 Down at Wed May 13 02:11:04 MDT 2020
-Port 5800 Down at Wed May 13 02:11:04 MDT 2020
-Port 3389 Down at Wed May 13 02:11:04 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-Open Ports
-COMMAND    PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
-chromium- 3881 mark  119u  IPv4 1400712      0t0  TCP localhost:54198->localhost:9229 (SYN_SENT)
-chromium- 3881 mark  151u  IPv4 1131277      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark   30u  IPv4 1406718      0t0  TCP localhost:34944->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   33u  IPv4 1406723      0t0  TCP localhost:34948->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   39u  IPv4 1404767      0t0  TCP localhost:34952->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   65u  IPv4 1137698      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
-adb       4970 root   11u  IPv4 1405516      0t0  TCP localhost:5037 (LISTEN)
-autossh   5071 root    3u  IPv4 1406696      0t0  TCP localhost:9996 (LISTEN)
-ssh       5074 root    3u  IPv4 1407210      0t0  TCP 192.168.43.66:38908->192.168.43.1:2222 (ESTABLISHED)
-ssh       5074 root    4u  IPv6 1407219      0t0  TCP ip6-localhost:9995 (LISTEN)
-ssh       5074 root    5u  IPv4 1407220      0t0  TCP localhost:9995 (LISTEN)
-ssh       5074 root    6u  IPv4 1407221      0t0  TCP localhost:5900 (LISTEN)
-ssh       5074 root    7u  IPv4 1407222      0t0  TCP localhost:5800 (LISTEN)
-ssh       5074 root    8u  IPv4 1407223      0t0  TCP localhost:3389 (LISTEN)
-ssh       5074 root    9u  IPv4 1407224      0t0  TCP localhost:8888 (LISTEN)
-ssh       5074 root   10u  IPv4 1404760      0t0  TCP localhost:8888->localhost:34948 (ESTABLISHED)
-ssh       5074 root   11u  IPv4 1407234      0t0  TCP localhost:8888->localhost:34944 (ESTABLISHED)
-ssh       5074 root   12u  IPv4 1406728      0t0  TCP localhost:8888->localhost:34952 (ESTABLISHED)
-Press Enter to Exit
-Press Ctrl-C to Exit
-.Executing UPACTION
-./beepup.sh
-............................
-Port 8888 Down at Wed May 13 02:13:57 MDT 2020
-Port 5900 Down at Wed May 13 02:13:57 MDT 2020
-Port 9995 Down at Wed May 13 02:13:57 MDT 2020
-Port 5800 Down at Wed May 13 02:13:57 MDT 2020
-Port 3389 Down at Wed May 13 02:13:57 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:14:12 MDT 2020
-Port 5900 Down at Wed May 13 02:14:12 MDT 2020
-Port 9996 Down at Wed May 13 02:14:12 MDT 2020
-Port 9995 Down at Wed May 13 02:14:12 MDT 2020
-Port 5800 Down at Wed May 13 02:14:13 MDT 2020
-Port 3389 Down at Wed May 13 02:14:13 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:14:28 MDT 2020
-Port 5900 Down at Wed May 13 02:14:28 MDT 2020
-Port 9996 Down at Wed May 13 02:14:28 MDT 2020
-Port 9995 Down at Wed May 13 02:14:28 MDT 2020
-Port 5800 Down at Wed May 13 02:14:28 MDT 2020
-Port 3389 Down at Wed May 13 02:14:28 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:14:43 MDT 2020
-Port 5900 Down at Wed May 13 02:14:43 MDT 2020
-Port 9996 Down at Wed May 13 02:14:43 MDT 2020
-Port 9995 Down at Wed May 13 02:14:43 MDT 2020
-Port 5800 Down at Wed May 13 02:14:43 MDT 2020
-Port 3389 Down at Wed May 13 02:14:43 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:14:59 MDT 2020
-Port 5900 Down at Wed May 13 02:14:59 MDT 2020
-Port 9996 Down at Wed May 13 02:14:59 MDT 2020
-Port 9995 Down at Wed May 13 02:14:59 MDT 2020
-Port 5800 Down at Wed May 13 02:14:59 MDT 2020
-Port 3389 Down at Wed May 13 02:14:59 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:15:14 MDT 2020
-Port 5900 Down at Wed May 13 02:15:14 MDT 2020
-Port 9996 Down at Wed May 13 02:15:14 MDT 2020
-Port 9995 Down at Wed May 13 02:15:14 MDT 2020
-Port 5800 Down at Wed May 13 02:15:14 MDT 2020
-Port 3389 Down at Wed May 13 02:15:14 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:15:29 MDT 2020
-Port 5900 Down at Wed May 13 02:15:29 MDT 2020
-Port 9996 Down at Wed May 13 02:15:29 MDT 2020
-Port 9995 Down at Wed May 13 02:15:29 MDT 2020
-Port 5800 Down at Wed May 13 02:15:29 MDT 2020
-Port 3389 Down at Wed May 13 02:15:29 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-.
-Port 8888 Down at Wed May 13 02:15:45 MDT 2020
-Port 5900 Down at Wed May 13 02:15:45 MDT 2020
-Port 9996 Down at Wed May 13 02:15:45 MDT 2020
-Port 9995 Down at Wed May 13 02:15:45 MDT 2020
-Port 5800 Down at Wed May 13 02:15:45 MDT 2020
-Port 3389 Down at Wed May 13 02:15:45 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-Open Ports
-COMMAND    PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
-chromium- 3881 mark  118u  IPv4 1417585      0t0  TCP localhost:55468->localhost:9229 (SYN_SENT)
+chromium- 3881 mark  119u  IPv4 1530363      0t0  TCP localhost:39452->localhost:9229 (SYN_SENT)
 chromium- 3881 mark  120u  IPv4 1413515      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark   32u  IPv4 1412713      0t0  TCP 192.168.43.66:52614->192.168.43.143:8008 (SYN_SENT)
-chromium- 3915 mark   33u  IPv4 1411665      0t0  TCP 192.168.43.66:52616->192.168.43.143:8008 (SYN_SENT)
+chromium- 3915 mark   30u  IPv4 1532763      0t0  TCP localhost:48236->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   33u  IPv4 1530875      0t0  TCP localhost:48244->localhost:8888 (ESTABLISHED)
 chromium- 3915 mark   37u  IPv4 1412716      0t0  UDP 224.0.0.251:mdns 
-chromium- 3915 mark   38u  IPv4 1418597      0t0  TCP localhost:35832->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   39u  IPv4 1416604      0t0  TCP localhost:35840->localhost:8888 (ESTABLISHED)
-chromium- 3915 mark   40u  IPv4 1415739      0t0  TCP localhost:35844->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   38u  IPv4 1530873      0t0  TCP localhost:48240->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   40u  IPv4 1534033      0t0  TCP localhost:48248->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   41u  IPv4 1534035      0t0  TCP localhost:48252->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   43u  IPv4 1533913      0t0  TCP localhost:48256->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   45u  IPv4 1534044      0t0  TCP localhost:48264->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   48u  IPv4 1533920      0t0  TCP localhost:48268->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   49u  IPv4 1534994      0t0  TCP localhost:48280->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   54u  IPv4 1534992      0t0  TCP localhost:48276->localhost:8888 (ESTABLISHED)
+chromium- 3915 mark   58u  IPv4 1534990      0t0  TCP localhost:48272->localhost:8888 (ESTABLISHED)
 chromium- 3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
-adb       8490 root   11u  IPv4 1417676      0t0  TCP localhost:5037 (LISTEN)
-autossh   8612 root    3u  IPv4 1417698      0t0  TCP localhost:9996 (LISTEN)
-ssh       8626 root    3u  IPv4 1415727      0t0  TCP 192.168.43.66:39808->192.168.43.1:2222 (ESTABLISHED)
-ssh       8626 root    4u  IPv6 1417704      0t0  TCP ip6-localhost:9995 (LISTEN)
-ssh       8626 root    5u  IPv4 1417705      0t0  TCP localhost:9995 (LISTEN)
-ssh       8626 root    6u  IPv4 1417706      0t0  TCP localhost:5900 (LISTEN)
-ssh       8626 root    7u  IPv4 1417707      0t0  TCP localhost:5800 (LISTEN)
-ssh       8626 root    8u  IPv4 1417708      0t0  TCP localhost:3389 (LISTEN)
-ssh       8626 root    9u  IPv4 1417709      0t0  TCP localhost:8888 (LISTEN)
-ssh       8626 root   10u  IPv4 1418598      0t0  TCP localhost:8888->localhost:35832 (ESTABLISHED)
-ssh       8626 root   11u  IPv4 1418604      0t0  TCP localhost:8888->localhost:35840 (ESTABLISHED)
-ssh       8626 root   12u  IPv4 1418609      0t0  TCP localhost:8888->localhost:35844 (ESTABLISHED)
+autossh   7499 root    3u  IPv4 1533963      0t0  TCP localhost:9996 (LISTEN)
+ssh       7502 root    3u  IPv4 1532640      0t0  TCP 192.168.43.66:52196->192.168.43.1:2222 (ESTABLISHED)
+ssh       7502 root    4u  IPv6 1530857      0t0  TCP ip6-localhost:9995 (LISTEN)
+ssh       7502 root    5u  IPv4 1530858      0t0  TCP localhost:9995 (LISTEN)
+ssh       7502 root    6u  IPv4 1530859      0t0  TCP localhost:5900 (LISTEN)
+ssh       7502 root    7u  IPv4 1530860      0t0  TCP localhost:5800 (LISTEN)
+ssh       7502 root    8u  IPv4 1530861      0t0  TCP localhost:3389 (LISTEN)
+ssh       7502 root    9u  IPv4 1530862      0t0  TCP localhost:8888 (LISTEN)
+ssh       7502 root   10u  IPv4 1534022      0t0  TCP localhost:8888->localhost:48236 (ESTABLISHED)
+ssh       7502 root   11u  IPv4 1534023      0t0  TCP localhost:8888->localhost:48240 (ESTABLISHED)
+ssh       7502 root   12u  IPv4 1534029      0t0  TCP localhost:8888->localhost:48244 (ESTABLISHED)
+ssh       7502 root   13u  IPv4 1530877      0t0  TCP localhost:8888->localhost:48248 (ESTABLISHED)
+ssh       7502 root   14u  IPv4 1530879      0t0  TCP localhost:8888->localhost:48252 (ESTABLISHED)
+ssh       7502 root   15u  IPv4 1534979      0t0  TCP localhost:8888->localhost:48256 (ESTABLISHED)
+ssh       7502 root   16u  IPv4 1533921      0t0  TCP localhost:8888->localhost:48272 (ESTABLISHED)
+ssh       7502 root   17u  IPv4 1533918      0t0  TCP localhost:8888->localhost:48264 (ESTABLISHED)
+ssh       7502 root   18u  IPv4 1532781      0t0  TCP localhost:8888->localhost:48268 (ESTABLISHED)
+ssh       7502 root   19u  IPv4 1533922      0t0  TCP localhost:8888->localhost:48276 (ESTABLISHED)
+ssh       7502 root   20u  IPv4 1533923      0t0  TCP localhost:8888->localhost:48280 (ESTABLISHED)
+adb       7558 root   11u  IPv4 1532702      0t0  TCP localhost:5037 (LISTEN)
 Press Enter to Exit
 Press Ctrl-C to Exit
 .Executing UPACTION
-./beepup.sh
-.............................
-Port 8888 Down at Wed May 13 02:18:43 MDT 2020
-Port 5900 Down at Wed May 13 02:18:43 MDT 2020
-Port 9996 Down at Wed May 13 02:18:43 MDT 2020
-Port 9995 Down at Wed May 13 02:18:43 MDT 2020
-Port 5800 Down at Wed May 13 02:18:43 MDT 2020
-Port 3389 Down at Wed May 13 02:18:43 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-Open Ports
-COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
-chromium-  3881 mark  118u  IPv4 1420374      0t0  TCP localhost:55534->localhost:9229 (SYN_SENT)
-chromium-  3881 mark  120u  IPv4 1413515      0t0  UDP 224.0.0.251:mdns 
-chromium-  3915 mark   32u  IPv4 1421392      0t0  TCP localhost:35910->localhost:8888 (ESTABLISHED)
-chromium-  3915 mark   37u  IPv4 1412716      0t0  UDP 224.0.0.251:mdns 
-chromium-  3915 mark   38u  IPv4 1420770      0t0  TCP localhost:35914->localhost:8888 (ESTABLISHED)
-chromium-  3915 mark   40u  IPv4 1420774      0t0  TCP localhost:35918->localhost:8888 (ESTABLISHED)
-chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
-adb        9925 root   11u  IPv4 1420714      0t0  TCP localhost:5037 (LISTEN)
-autossh   10024 root    3u  IPv4 1421376      0t0  TCP localhost:9996 (LISTEN)
-ssh       10027 root    3u  IPv4 1417173      0t0  TCP 192.168.43.66:39886->192.168.43.1:2222 (ESTABLISHED)
-ssh       10027 root    4u  IPv6 1420760      0t0  TCP ip6-localhost:9995 (LISTEN)
-ssh       10027 root    5u  IPv4 1420761      0t0  TCP localhost:9995 (LISTEN)
-ssh       10027 root    6u  IPv4 1420762      0t0  TCP localhost:5900 (LISTEN)
-ssh       10027 root    7u  IPv4 1420763      0t0  TCP localhost:5800 (LISTEN)
-ssh       10027 root    8u  IPv4 1420764      0t0  TCP localhost:3389 (LISTEN)
-ssh       10027 root    9u  IPv4 1420765      0t0  TCP localhost:8888 (LISTEN)
-ssh       10027 root   10u  IPv4 1420768      0t0  TCP localhost:8888->localhost:35910 (ESTABLISHED)
-ssh       10027 root   11u  IPv4 1421393      0t0  TCP localhost:8888->localhost:35914 (ESTABLISHED)
-ssh       10027 root   12u  IPv4 1421399      0t0  TCP localhost:8888->localhost:35918 (ESTABLISHED)
-Press Enter to Exit
-Press Ctrl-C to Exit
-.Executing UPACTION
-./beepup.sh
-....
-Port 8888 Down at Wed May 13 02:19:29 MDT 2020
-Port 5900 Down at Wed May 13 02:19:29 MDT 2020
-Port 9996 Down at Wed May 13 02:19:29 MDT 2020
-Port 9995 Down at Wed May 13 02:19:29 MDT 2020
-Port 5800 Down at Wed May 13 02:19:30 MDT 2020
-Port 3389 Down at Wed May 13 02:19:30 MDT 2020
-Executing DOWNACTION
-./beepdown.sh;echo Starting tetherwifi.sh...;perl -e "print \"\$ENV{'SCAN'}\\n\$ENV{'IMMORTALPASSWORD'}\\n\";"|./tetherwifi.sh
-Starting tetherwifi.sh...
-Cleaning Up
-Scan Server and Proxy (y/n)? Password: 
-Running SSH in Background
-Open Ports
-COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
-chromium-  3881 mark  118u  IPv4 1420374      0t0  TCP localhost:55534->localhost:9229 (SYN_SENT)
-chromium-  3881 mark  120u  IPv4 1413515      0t0  UDP 224.0.0.251:mdns 
-chromium-  3915 mark   32u  IPv4 1421644      0t0  TCP localhost:35964->localhost:8888 (ESTABLISHED)
-chromium-  3915 mark   37u  IPv4 1412716      0t0  UDP 224.0.0.251:mdns 
-chromium-  3915 mark   39u  IPv4 1421042      0t0  TCP localhost:35968->localhost:8888 (ESTABLISHED)
-chromium-  3915 mark   41u  IPv4 1421664      0t0  TCP localhost:35972->localhost:8888 (ESTABLISHED)
-chromium-  3915 mark  105u  IPv4   68502      0t0  UDP 224.0.0.251:mdns 
-adb       10336 root   11u  IPv4 1421576      0t0  TCP localhost:5037 (LISTEN)
-autossh   10435 root    3u  IPv4 1421619      0t0  TCP localhost:9996 (LISTEN)
-ssh       10438 root    3u  IPv4 1422525      0t0  TCP 192.168.43.66:39940->192.168.43.1:2222 (ESTABLISHED)
-ssh       10438 root    4u  IPv6 1421624      0t0  TCP ip6-localhost:9995 (LISTEN)
-ssh       10438 root    5u  IPv4 1421625      0t0  TCP localhost:9995 (LISTEN)
-ssh       10438 root    6u  IPv4 1421626      0t0  TCP localhost:5900 (LISTEN)
-ssh       10438 root    7u  IPv4 1421627      0t0  TCP localhost:5800 (LISTEN)
-ssh       10438 root    8u  IPv4 1421628      0t0  TCP localhost:3389 (LISTEN)
-ssh       10438 root    9u  IPv4 1421629      0t0  TCP localhost:8888 (LISTEN)
-ssh       10438 root   10u  IPv4 1421028      0t0  TCP localhost:8888->localhost:35964 (ESTABLISHED)
-ssh       10438 root   11u  IPv4 1422542      0t0  TCP localhost:8888->localhost:35968 (ESTABLISHED)
-ssh       10438 root   12u  IPv4 1421043      0t0  TCP localhost:8888->localhost:35972 (ESTABLISHED)
-Press Enter to Exit
-Press Ctrl-C to Exit
-.Executing UPACTION
-./beepup.sh
-...........
+./beepup.sh;killall dumpcap 2>/dev/null;dumpcap -w dumpcap.pcapng;
+..............

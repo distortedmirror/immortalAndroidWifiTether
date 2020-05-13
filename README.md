@@ -1,5 +1,6 @@
 # immortalAndroidWifiTether
-Immortal Android WiFi Tether Process (Reconnect / Re-Authenticate / Audit / Debug)
+IMMORTAL ANDROID WIFI TETHER AUDIT PROCESS
+(Reconnect / Re-Authenticate / Packet Capture / Process List - Network Disconnect)
 
 My internet connection in a rural are was unreliable and I wanted to automate the manual process of entering passwords and reconnecting as it got repetitive. I also wanted to find out why it is unreliable.  This program detects if the internet is down and attempts to re-connect. Also, it captures the last minute of network traffic prior to a disconnect as well as the current processes at the time of the disconnect, and you can easily add different actions to capture auditing and debugging information. It also enables you to enter your password once and it will reconnect with the same credentials. You configure it via constants in immortalAndroid.sh and other files. To start program run on the android: 
 

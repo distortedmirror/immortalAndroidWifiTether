@@ -1,3 +1,3 @@
 iptables --flush
 nmap -sV -T4 -F --version-light 40.121.213.9
-./iptables.sh
+./scripts/iptables.sh

@@ -4,6 +4,8 @@ killall autossh 2> /dev/null
 killall autossh 2> /dev/null
 ./iptables.sh
 /etc/init.d/avahi-daemon stop
+/etc/init.d/avahi-daemon stop
+killall dhclient
 /home/mark/Downloads/platform-tools/adb kill-server 2> /dev/null
 /home/mark/Downloads/platform-tools/adb start-server
 /etc/init.d/cups stop

@@ -33,8 +33,10 @@ iptables -A INPUT -s 127.0.0.1 -j ACCEPT
 #iptables -A INPUT -i wlp2s0 -m mac --mac-source e4:e1:30:08:a3:a0 -j ACCEPT
 #iptables -A INPUT -i wlp2s0 -m mac --mac-source 3c:f0:11:49:26:2c -j ACCEPT
 #iptables -A INPUT -i wlp2s0 -m mac --mac-source 04:d3:95:46:cc:f5 -j ACCEPT
-   iptables -A INPUT -s 192.168.43.143 -j ACCEPT
-   iptables -A INPUT -s 224.0.0.251 -j ACCEPT
+   iptables -A INPUT -s 192.168.43.118 -j DROP
+   iptables -A INPUT -s 192.168.43.143 -j DROP
+   iptables -A INPUT -s 224.0.0.251 -j DROP #ACCEPT
+
    iptables -A INPUT -s 239.255.255.250  -j ACCEPT
    iptables -A INPUT -j DROP
 #   iptables -A OUTPUT -p tcp --sport 8100 -j ACCEPT
@@ -69,8 +71,10 @@ iptables -A OUTPUT -p tcp --sport 8008 -j DROP
 iptables -A OUTPUT -p tcp --dport 8009 -j DROP
 iptables -A OUTPUT -p tcp --sport 8009 -j DROP
 iptables -A OUTPUT -d 127.0.0.1 -j ACCEPT
-   iptables -A OUTPUT -d 192.168.43.143 -j ACCEPT
-   iptables -A OUTPUT -d 224.0.0.251 -j ACCEPT
+   iptables -A OUTPUT -d 192.168.43.118 -j DROP
+   iptables -A OUTPUT -d 192.168.43.143 -j DROP
+   iptables -A OUTPUT -d 224.0.0.251 -j DROP #ACCEPT
    iptables -A OUTPUT -d 239.255.255.250  -j ACCEPT
    iptables -A OUTPUT -j DROP
    iptables -L
+/etc/init.d/cups stop

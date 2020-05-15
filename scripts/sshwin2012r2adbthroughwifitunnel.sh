@@ -8,7 +8,7 @@ killall autossh 2> /dev/null
 killall dhclient
 /home/mark/Downloads/platform-tools/adb kill-server 2> /dev/null
 /home/mark/Downloads/platform-tools/adb start-server
-/etc/init.d/cups stop
+#/etc/init.d/cups stop
 /etc/init.d/apache2 stop
 /etc/init.d/ssh stop
 systemctl stop systemd-resolved 

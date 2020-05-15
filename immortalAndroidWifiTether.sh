@@ -12,7 +12,7 @@ echo Immortal Android WIFI Tether
 echo ----------------------------
 echo Make sure the server is up and that the Android is running ./tetherwifi.sh
 echo
-./scanLocalQuick.sh
+#./scanLocalQuick.sh
 echo
 #./scanServerQuick.sh
 cd scripts

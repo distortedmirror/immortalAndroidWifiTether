@@ -4,7 +4,7 @@ if [ "$1" = "" -o "$2" = "" -o "$3" = "" -o "$4" = "" -o "$5" = "" -o "$6" = "" 
  echo "Example: ./monitor.sh 10 15 \"21 80 443\" './emaildown.sh email@domain.com \"\$TITLE\" \"\$MESSAGE\";./restart.sh' './emailup.sh email@domain.com \"Server Up\" \"\$MESSAGE\"' './start.sh' './stop.sh'" "date;"
   exit 1
 fi
-export ACTIONSLEEP=10
+export ACTIONSLEEP=8
 export STARTWAITMONITORSECONDS=$1
 export HEARTBEATTIMEINSECONDS=$2
 export TCPPORTSTOSCANFORLISTEN=$3

@@ -15,6 +15,10 @@ ssh        2595 root   13u  IPv4 1148540      0t0  TCP localhost:8888->localhost
 ssh        2595 root   14u  IPv4 1148543      0t0  TCP localhost:8888->localhost:33668 (ESTABLISHED)
 ssh        2595 root   15u  IPv4 1145696      0t0  TCP localhost:8888->localhost:33672 (ESTABLISHED)
 ssh        2595 root   16u  IPv4 1148547      0t0  TCP localhost:8888->localhost:33676 (ESTABLISHED)
+ssh        2595 root   17u  IPv4 1149009      0t0  TCP localhost:8888->localhost:33680 (ESTABLISHED)
+ssh        2595 root   18u  IPv4 1148649      0t0  TCP localhost:8888->localhost:33684 (ESTABLISHED)
+ssh        2595 root   19u  IPv4 1148651      0t0  TCP localhost:8888->localhost:33688 (ESTABLISHED)
+ssh        2595 root   20u  IPv4 1147738      0t0  TCP localhost:8888->localhost:33692 (ESTABLISHED)
 chromium- 30414 mark  143u  IPv4 1117655      0t0  UDP 224.0.0.251:mdns 
 chromium- 30449 mark   32u  IPv4 1145685      0t0  TCP localhost:33648->localhost:8888 (ESTABLISHED)
 chromium- 30449 mark   36u  IPv4 1148936      0t0  TCP localhost:33664->localhost:8888 (ESTABLISHED)
@@ -23,5 +27,9 @@ chromium- 30449 mark   39u  IPv4 1146880      0t0  TCP localhost:33656->localhos
 chromium- 30449 mark   40u  IPv4 1148994      0t0  TCP localhost:33676->localhost:8888 (ESTABLISHED)
 chromium- 30449 mark   41u  IPv4 1148950      0t0  TCP localhost:33668->localhost:8888 (ESTABLISHED)
 chromium- 30449 mark   46u  IPv4 1148954      0t0  TCP localhost:33672->localhost:8888 (ESTABLISHED)
+chromium- 30449 mark   49u  IPv4 1147729      0t0  TCP localhost:33684->localhost:8888 (ESTABLISHED)
+chromium- 30449 mark   53u  IPv4 1149953      0t0  TCP localhost:33680->localhost:8888 (ESTABLISHED)
+chromium- 30449 mark   55u  IPv4 1149047      0t0  TCP localhost:33688->localhost:8888 (ESTABLISHED)
+chromium- 30449 mark   56u  IPv4 1147737      0t0  TCP localhost:33692->localhost:8888 (ESTABLISHED)
 chromium- 30449 mark   90u  IPv4  679552      0t0  UDP 224.0.0.251:mdns 
 Press Enter to Exit

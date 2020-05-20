@@ -41,7 +41,7 @@ echo $STARTACTION
 bash -c "$STARTACTION" &
 sleep $ACTIONSLEEP 
 while true; do
- echo | ./openTCPUDPPortslSOF.sh > openports.txt
+ ./openTCPUDPPortslSOF.sh > openports.txt
  rm message.txt 2> /dev/null
  touch message.txt
  for port in `echo $TCPPORTSTOSCANFORLISTEN`; do

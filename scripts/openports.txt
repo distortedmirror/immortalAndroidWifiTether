@@ -1,75 +1,14 @@
-COMMAND    PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-cupsd      546  root    7u  IPv6  21985      0t0  TCP ip6-localhost:ipp (LISTEN)
-cupsd      546  root    8u  IPv4  21986      0t0  TCP localhost:ipp (LISTEN)
-cups-brow  620  root    7u  IPv4  23038      0t0  UDP *:ipp 
-chromium- 3916  mark  247u  IPv4  48024      0t0  UDP 224.0.0.251:mdns 
-chromium- 3959  mark   31u  IPv4  71244      0t0  TCP localhost:52860->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   36u  IPv4  71800      0t0  TCP localhost:52864->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   38u  IPv4  43661      0t0  UDP 224.0.0.251:mdns 
-chromium- 3959  mark   39u  IPv4  71804      0t0  TCP localhost:52868->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   40u  IPv4  71401      0t0  TCP localhost:52872->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   43u  IPv4  71404      0t0  TCP localhost:52876->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   46u  IPv4  71819      0t0  TCP localhost:52880->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   49u  IPv4  71871      0t0  TCP localhost:52888->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   50u  IPv4  76379      0t0  TCP localhost:52988->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   51u  IPv4  77470      0t0  TCP localhost:53000->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   53u  IPv4  72927      0t0  TCP localhost:52892->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   59u  IPv4  72930      0t0  TCP localhost:52896->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   63u  IPv4  72933      0t0  TCP localhost:52900->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   69u  IPv4  71924      0t0  TCP localhost:52908->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   70u  IPv4  79404      0t0  TCP localhost:53020->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   71u  IPv4  72684      0t0  TCP localhost:52912->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   74u  IPv4  74889      0t0  TCP localhost:52924->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   77u  IPv4  76436      0t0  TCP localhost:52992->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   78u  IPv4  73936      0t0  TCP localhost:52920->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   81u  IPv4  75505      0t0  TCP localhost:52956->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   82u  IPv4  75507      0t0  TCP localhost:52960->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   85u  IPv4  77284      0t0  TCP localhost:52996->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   87u  IPv4  78464      0t0  TCP localhost:53016->localhost:8888 (CLOSE_WAIT)
-chromium- 3959  mark   91u  IPv4  46573      0t0  UDP 224.0.0.251:mdns 
-chromium- 3959  mark   95u  IPv4  74668      0t0  TCP localhost:52972->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   96u  IPv4  57012      0t0  UDP *:53958 
-chromium- 3959  mark   97u  IPv6  57013      0t0  UDP *:54549 
-chromium- 3959  mark   98u  IPv4  75532      0t0  TCP localhost:52976->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark   99u  IPv4  74672      0t0  TCP localhost:52980->localhost:8888 (ESTABLISHED)
-chromium- 3959  mark  104u  IPv4  74674      0t0  TCP localhost:52984->localhost:8888 (ESTABLISHED)
-avahi-dae 6717 avahi   12u  IPv4  70641      0t0  UDP *:mdns 
-avahi-dae 6717 avahi   13u  IPv6  70642      0t0  UDP *:mdns 
-avahi-dae 6717 avahi   14u  IPv4  70643      0t0  UDP *:58700 
-avahi-dae 6717 avahi   15u  IPv6  70644      0t0  UDP *:57725 
-adb       6740  root    9u  IPv4  71682      0t0  TCP localhost:5037 (LISTEN)
-autossh   6808  root    3u  IPv4  71730      0t0  TCP localhost:9996 (LISTEN)
-ssh       6811  root    3u  IPv4  71214      0t0  TCP 192.168.43.78:41632->192.168.43.1:2222 (ESTABLISHED)
-ssh       6811  root    4u  IPv6  71227      0t0  TCP ip6-localhost:9995 (LISTEN)
-ssh       6811  root    5u  IPv4  71228      0t0  TCP localhost:9995 (LISTEN)
-ssh       6811  root    6u  IPv4  71229      0t0  TCP localhost:5900 (LISTEN)
-ssh       6811  root    7u  IPv4  71230      0t0  TCP localhost:5800 (LISTEN)
-ssh       6811  root    8u  IPv4  71231      0t0  TCP localhost:3389 (LISTEN)
-ssh       6811  root    9u  IPv4  71232      0t0  TCP localhost:8888 (LISTEN)
-ssh       6811  root   10u  IPv4  71262      0t0  TCP localhost:8888->localhost:52864 (ESTABLISHED)
-ssh       6811  root   11u  IPv4  71245      0t0  TCP localhost:8888->localhost:52860 (ESTABLISHED)
-ssh       6811  root   12u  IPv4  71396      0t0  TCP localhost:8888->localhost:52868 (ESTABLISHED)
-ssh       6811  root   13u  IPv4  71402      0t0  TCP localhost:8888->localhost:52872 (ESTABLISHED)
-ssh       6811  root   14u  IPv4  71405      0t0  TCP localhost:8888->localhost:52876 (ESTABLISHED)
-ssh       6811  root   15u  IPv4  71407      0t0  TCP localhost:8888->localhost:52880 (ESTABLISHED)
-ssh       6811  root   16u  IPv4  77471      0t0  TCP localhost:8888->localhost:53000 (ESTABLISHED)
-ssh       6811  root   17u  IPv4  72923      0t0  TCP localhost:8888->localhost:52888 (ESTABLISHED)
-ssh       6811  root   18u  IPv4  72928      0t0  TCP localhost:8888->localhost:52892 (ESTABLISHED)
-ssh       6811  root   19u  IPv4  72931      0t0  TCP localhost:8888->localhost:52896 (ESTABLISHED)
-ssh       6811  root   20u  IPv4  72934      0t0  TCP localhost:8888->localhost:52900 (ESTABLISHED)
-ssh       6811  root   21u  IPv4  77070      0t0  TCP localhost:8888->localhost:52988 (ESTABLISHED)
-ssh       6811  root   22u  IPv4  71925      0t0  TCP localhost:8888->localhost:52908 (ESTABLISHED)
-ssh       6811  root   23u  IPv4  72685      0t0  TCP localhost:8888->localhost:52912 (ESTABLISHED)
-ssh       6811  root   25u  IPv4  74880      0t0  TCP localhost:8888->localhost:52920 (ESTABLISHED)
-ssh       6811  root   26u  IPv4  73959      0t0  TCP localhost:8888->localhost:52924 (ESTABLISHED)
-ssh       6811  root   29u  IPv4  76437      0t0  TCP localhost:8888->localhost:52992 (ESTABLISHED)
-ssh       6811  root   31u  IPv4  76615      0t0  TCP localhost:8888->localhost:52996 (ESTABLISHED)
-ssh       6811  root   32u  IPv4  75510      0t0  TCP localhost:8888->localhost:52956 (ESTABLISHED)
-ssh       6811  root   33u  IPv4  75511      0t0  TCP localhost:8888->localhost:52960 (ESTABLISHED)
-ssh       6811  root   36u  IPv4  75530      0t0  TCP localhost:8888->localhost:52972 (ESTABLISHED)
-ssh       6811  root   37u  IPv4  75533      0t0  TCP localhost:8888->localhost:52976 (ESTABLISHED)
-ssh       6811  root   38u  IPv4  75537      0t0  TCP localhost:8888->localhost:52980 (ESTABLISHED)
-ssh       6811  root   39u  IPv4  75539      0t0  TCP localhost:8888->localhost:52984 (ESTABLISHED)
-ssh       6811  root   40u  IPv4  79228      0t0  TCP localhost:8888->localhost:53016 (FIN_WAIT2)
-ssh       6811  root   41u  IPv4  78543      0t0  TCP localhost:8888->localhost:53020 (ESTABLISHED)
-dhclient  7214  root    6u  IPv4  73473      0t0  UDP *:bootpc 
+COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chromium-  3916 mark  165u  IPv4 7561730      0t0  UDP 224.0.0.251:mdns 
+chromium-  3916 mark  203u  IPv4 8629482      0t0  TCP localhost:41204->localhost:9229 (SYN_SENT)
+chromium-  3916 mark  205u  IPv4 8630347      0t0  TCP 192.168.43.78:40608->192.168.43.143:9222 (SYN_SENT)
+chromium-  3916 mark  227u  IPv4 8630351      0t0  TCP localhost:41216->localhost:9229 (SYN_SENT)
+chromium-  3959 mark   31u  IPv4 7791379      0t0  TCP 192.168.43.78:52338->192.168.43.143:8008 (ESTABLISHED)
+chromium-  3959 mark   91u  IPv4   46573      0t0  UDP 224.0.0.251:mdns 
+chromium-  3959 mark  124u  IPv4 4894969      0t0  UDP *:43822 
+chromium-  3959 mark  125u  IPv6 4894970      0t0  UDP *:39219 
+autossh   10124 root    3u  IPv4 8630609      0t0  TCP localhost:9996 (LISTEN)
+adb       10143 root    9u  IPv4 8630649      0t0  TCP localhost:5037 (LISTEN)
+droidmote 20442 root    3u  IPv4 7120483      0t0  TCP *:2302 (LISTEN)
+droidmote 20442 root    4u  IPv4 7138893      0t0  TCP 192.168.43.78:2302->192.168.43.37:48421 (ESTABLISHED)
+droidmote 20442 root    5u  IPv4 7120486      0t0  UDP *:2303 

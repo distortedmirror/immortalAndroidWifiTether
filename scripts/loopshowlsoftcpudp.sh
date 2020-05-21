@@ -1,1 +1,1 @@
-while true; do date;sleep 1;./openTCPUDPPortslSOF.sh ; done
+while true; do date;sleep 1; ./openTCPUDPPortslSOF.sh ; done

@@ -2,6 +2,11 @@ echo Immortal Android WIFI Tether
 echo ----------------------------
 echo Make sure the server is up and that the Android is running ./tetherwifi.sh
 echo
+/etc/init.d/cups stop
+/etc/init.d/cups-browsed stop
+killall autossh 2>/dev/null
+killall autossh 2>/dev/null
+killall autossh 2>/dev/null
 echo -n "Clear Packet Capture and Process Accounting? "
 read clear
 if [ "$clear" = "y" -o "$clear" = "Y" ]; then
@@ -16,14 +21,14 @@ echo
 echo
 #./scanServerQuick.sh
 cd scripts
-export STARTWAITINSECONDS=3
-export HEARTBEATTIMEINSECONDS=5
+export STARTWAITINSECONDS=2
+export HEARTBEATTIMEINSECONDS=10
 export TCPPORTSTOSCANFORLISTEN="8888 5900 5037 9996 9995 5800 3389"
 export NAME="immortaltetherwifi.sh"
 export EMAILS="mark.brito@gmail.com;mark.brito.gcloud@gmail.com"
 export IMMORTALPASSWORD
 export SCAN="n"
-export SECONDSTODUMPCAP=60
+export SECONDSTODUMPCAP=120
 export STARTDUMPCAP=`date +"%s"`
 export ENDDUMPCAP=`date +"%s"`
 #echo -n "Scan Server and Proxy (y/n)? "

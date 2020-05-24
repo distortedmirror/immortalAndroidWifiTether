@@ -14,7 +14,6 @@ elif [ "$selection" = "3" ]; then
   echo ADB Forward Port 8022 8022
   adb forward --remove-all
   adb forward tcp:8022 tcp:8022
-  #ssh u0_a192@127.0.0.1 -p 8022 'echo "QAZwsx123!"|./sshwifi.sh' -N &
   #echo Logging in...
   #sleep 8
   ssh u0_a192@127.0.0.1 -p 8022
